@@ -39,7 +39,7 @@ header nav{
   cursor:pointer;
 }
 
-h3{
+h4{
   color: rgb(255, 145, 0);
   margin-bottom: 10px;
   
@@ -79,7 +79,7 @@ nav .menu a, i{
 }
 
 .button{
-  margin-left: -3px;
+  margin-left: 3px;
   background-color: orange;
   text-decoration: none;
   border-radius: 4px;
@@ -137,7 +137,7 @@ nav .menu a, i{
   text-align: center;
   padding-top: 30px;
   justify-content: center;
-  /* background-color: #eef0f5; */
+  background-color: #eef0f5;
 }
 .orderPage{
   text-align: center;
@@ -172,12 +172,37 @@ nav .menu a, i{
 
 
 width: 50rem;
-  /* width: min(90%, 30rem); */
   margin-inline: auto;
 }
-/* .food-grid .foodImg{
-  margin: 100px;
-} */
+.foodImg-1{
+  background-image: url(../img/selected\ 1.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  ;
+}
+.foodImg-1 p{
+  margin-bottom: 30px;
+}
+
+.fourthPage{
+  background-image: url(../img/istockphoto-680917848-612x612.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-position-y: 10px;
+  padding-top: 60px;
+  text-align: center;
+}
+.openingHours{
+  display: flex;
+  justify-content: space-around;
+}
+.fourthPage img{
+  width:fit-content;
+}
+
+
 
 
 
