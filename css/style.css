@@ -106,7 +106,7 @@ nav .menu a, i{
   background: url('../img/newImg.png');
   background-size: cover;
   
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgba(255, 250, 250, 0.356);
 }
 
@@ -179,20 +179,28 @@ width: 50rem;
   background-size:cover;
   background-repeat: no-repeat;
   padding-top: 50px;
-  ;
 }
 .foodImg-1 p{
   margin-bottom: 30px;
 }
+.foodImg-2{
+  background-image: url(../img/eggg.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+}
+
+
 
 .fourthPage{
   background-image: url(../img/istockphoto-680917848-612x612.jpg);
+  background-position-y: 1000px;
   background-repeat: no-repeat;
-  background-size:cover;
   background-position: center;
   background-position-y: 10px;
   padding-top: 60px;
   text-align: center;
+  padding-bottom: 200px;
 }
 .openingHours{
   display: flex;
@@ -201,38 +209,30 @@ width: 50rem;
 .fourthPage img{
   width:fit-content;
 }
-
-
-
-
-
-
-
-/* .header{
-  font-family: 'Yeseva One', cursive;
-  flex-wrap: wrap;
-  font-size: 3rem;
+.fifthPage{
+  padding: 60px 90px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.459);
 }
 
-
-/* .welcomePage {
-  padding: 19px;
-  display:flex;
-}
-.welcomePage >h1{
-  padding-right: -500px;
-  border: 1px solid black;
-}
-.ourCuisinePage{
+#footer{
   display: flex;
+  justify-content: space-around;
+  padding: 0 100px;
 }
-.button{
-  color:orange;
+/* #footer .footerInner{
+  padding: 10px;
+} */
+
+
+#footer .footerInner-1,.footerInner-2,.footerInner-3,.footerInner-4{
+  flex: 1;
+
 }
-.searchInput{
-  height: 5vh;
-  /* margin-left: -50px; */
+#footer .footerInner-1,.footerInner-2,.footerInner-3{
+  padding-right: 10px;
 }
+
 
 
 /******************************************
