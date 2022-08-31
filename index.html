@@ -2,12 +2,14 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
 		<title>Title in the tab</title>
 
 		<!-- external CSS link -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Yeseva+One&display=swap" rel="stylesheet">
 		<script src="https://unpkg.com/phosphor-icons"></script>
 		<link rel="stylesheet" href="css/normalize.css">
@@ -15,7 +17,6 @@
 	</head>
 	<body>
 		<div class="header">
-			<header >
 				<nav>
 					<img class="siteLogo" src="./img/chef.png" alt="">
 					<ul>
@@ -30,7 +31,7 @@
 					</ul>
 				</nav>
 				
-				<section class="welcomingPage" >
+				<section class="welcomingPage section">
 					<h1 id="firstHeading" class="heading">Welcome To our Cuisine Restaurant
 					</h1>
 
@@ -45,10 +46,9 @@
 					</section>
 					
 				</section>
-			</header>
 		</div>
 
-		<div class="secondPage" id="about">
+		<div class="secondPage section" id="about">
 			<div class="inner-dummy"></div>
 			<div class="inner-second">
 				<h4>About us</h4>
@@ -67,7 +67,7 @@
 			
 		</div>
 		
-		<div id="thirdPage">
+		<div class="section" id="thirdPage">
 			<h4>Order Online Now</h4>
 			<h2>Our Specility Cuisine</h2>
 			
@@ -79,21 +79,65 @@
 				<li> <a href="">Shake</a></li>
 			</ul>
 			<section class="food-grid">
-				<div class="foodImg-1">
-					 <span>$14.99</span>
-					 <p>Contadina</p>
-					 <a class="button" href=""> Order Now</a>
+				<div class="foodImg one">
+					<section class="displayPriceOnHover" id="firstClick">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
 				</div>
-				<div class="foodImg-2"></div>
-				<div class="foodImg-3"> <img src="./img/bread and steak.jpg" alt=""></div>
-				<div class="foofImg-4"> <img src="./img/eggg.jpg" alt=""></div>
-				<div class="foodImg-5"> <img src="./img/eggg.jpg" alt=""></div>
-				<div class="foodImg-6"> <img src="./img/eggg.jpg" alt=""></div>
-				<div class="foodImg-7"> <img src="./img/eggg.jpg" alt=""></div>
-				<div class="foodImg-8"> <img src="./img/eggg.jpg" alt=""></div>
+				<div class="foodImg two">
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg three">
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg four"> 
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg five">
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg six"> 
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg seven">
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
+				<div class="foodImg eight">
+					<section class="displayPriceOnHover">
+						<span>$14.99</span>
+						<p>Contadina</p>
+						<a class="button" href=""> Order Now</a>
+					</section>
+				</div>
 			</section>
 		</div>
-		<div class="fourthPage">
+		<div class="fourthPage section">
 			<h4>Book Table</h4>
 			<h2>Opening Hours</h2>
 			<i class="ph-call-logo"></i>
@@ -109,12 +153,13 @@
 					<p class="time">11:00am - 20:00pm</p>
 				</section>
 			</section>
-			<iframe src="" frameborder="0"></iframe>
+			<iframe src="./img/videoplayback.mp4" frameborder="0"></iframe>
 
 		</div>
-		<div class="fifthPage">
+		<div class="fifthPage section">
 			<h4>Testimonies</h4>
 			<h2>Customer Say</h2>
+			<img src="./img/reviewPicture.JPG" alt="">
 			<section>
 				<img src="" alt="">
 				<h3>Mr John Smith</h3>
@@ -133,6 +178,7 @@
 			</section>
 			<section class="footerInner-2">
 				<h3>Open Hours</h3>
+				<h6>Life</h6>
 				<section> 
 					<p>Mon-Fri 9AM-6PM</p>
 					<p>Saturday: 9Am-4PM</p>
@@ -149,7 +195,8 @@
 			</section>
 			<section class="footerInner-4">
 				<h3>Subscribe Newsletter</h3>
-				<input type="text" placeholder="Email Address">
+				<input  type="text" placeholder="Email Address"> 
+				<i class="ph-paper-plane-tilt"></i>
 			</section>
 		</footer>
 		<script type="text/javascript" src="js/main.js"></script>

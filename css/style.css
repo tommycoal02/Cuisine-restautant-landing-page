@@ -15,10 +15,10 @@
 /* LAYOUT
 /*******************************************/
 html{
-  font-size: 15px;
+  font-size: 20px;
 }
 body {
-  font-family: 'arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header{
@@ -27,12 +27,16 @@ body {
   width: 100%;
   height: 100%;
 }
-header{
+.section{
+  padding-block: 3rem;
+}
+.header{
   padding: 10px 70px;
 }
-header nav{
+.header nav{
   display: flex;
   justify-content: space-between;
+
 }
 .siteLogo{
   height:5vh;
@@ -49,7 +53,7 @@ h4{
   display: flex;
   list-style: none;
 }
-header li{
+.header li{
   margin-left: 20px;
 }
 .header a, .mealTime a{
@@ -62,16 +66,16 @@ nav .menu a, i{
 }
 
 .welcomingPage{
-  padding-top: 100px 0;
+  /* padding-top: 100px 0; */
+  margin-inline: 4rem 20rem;
 }
 
 .heading{
-  font-family: 'Yeseva One', cursive;
-  font-size: 3rem;
+  /* font-size: 3rem;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  font-size: 3rem;
-  max-width: 40rem;
+  margin-bottom: 10px; */
+  /* font-size: 3rem; */
+  /* max-width: 40rem; */
 }
 #firstHeading{
   font-size: 4rem;
@@ -101,12 +105,8 @@ nav .menu a, i{
 
 .secondPage{
   display: flex;
-  /* flex-direction: row; */
-  /* padding: 20px 200px; */
   background: url('../img/newImg.png');
   background-size: cover;
-  
-  /* height: 100vh; */
   background-color: rgba(255, 250, 250, 0.356);
 }
 
@@ -147,12 +147,12 @@ nav .menu a, i{
   justify-content: center;
   text-decoration: none;
   margin: 10px;
-  border-bottom: 2px solid black;
-  margin: 0px 300px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.185);
 }
 .mealTime li{
   margin: 15px;
   list-style: none;
+  margin-bottom: 0.1;
 }
 .mealTime a{
   color: black;
@@ -168,27 +168,45 @@ nav .menu a, i{
   justify-content: center;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-
-width: 50rem;
-  margin-inline: auto;
+  grid-template-columns: repeat(4, 1fr);
+  /* width: 50rem; */
+  margin-inline: 30px;
 }
-.foodImg-1{
-  background-image: url(../img/selected\ 1.jpg);
+.foodImg{
+  background-color: white;
   background-size:cover;
   background-repeat: no-repeat;
   padding-top: 50px;
+  height: 13rem;
 }
-.foodImg-1 p{
+/* .foodImg:hover{
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
+} */
+.foodImg p{
   margin-bottom: 30px;
 }
-.foodImg-2{
-  background-image: url(../img/eggg.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-  padding-top: 50px;
+.foodImg p{
+  margin-bottom: 30px;
 }
+.foodImg.one{
+  background-image: url(../img/selected\ 1.jpg);
+
+}
+.foodImg.two{
+  background-image: url(../img/eggg.jpg);
+}
+.foodImg.three{
+  background-image: url(../img/bread\ and\ steak.jpg);
+
+}
+.foodImg.four{
+  background-image: url(../img/bread\ and\ steak.jpg);
+}
+.displayPriceOnHover{
+  display: none;
+}
+
 
 
 
@@ -209,32 +227,127 @@ width: 50rem;
 .fourthPage img{
   width:fit-content;
 }
+
 .fifthPage{
   padding: 60px 90px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.459);
 }
+.fifthPage img{
+  width: 9%;
+  border-radius: 70px 70px
+}
 
 #footer{
+  padding-bottom : 100px;
   display: flex;
   justify-content: space-around;
   padding: 0 100px;
+  background-color: #eef0f5;
+  padding-bottom: 70px;
 }
-/* #footer .footerInner{
-  padding: 10px;
-} */
-
 
 #footer .footerInner-1,.footerInner-2,.footerInner-3,.footerInner-4{
   flex: 1;
+  padding-top: 30px;
+  padding-bottom: 15px;
 
 }
 #footer .footerInner-1,.footerInner-2,.footerInner-3{
   padding-right: 10px;
 }
-
-
+#footer h3{
+  margin-bottom: 30px;
+}
+.footerInner h3, h6,section{
+  margin-bottom: 10px;
+}
+.footerInner-4 i{
+  margin-left: -40px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+/* Media query for responsivness */
+
+@media screen and (max-width: 950px){
+  html{
+    font-size: 10px;
+  }
+  body{
+    width: 100%;
+  }
+  #firstHeading {
+    font-size: 3rem;
+  }
+  .siteLogo {
+    height: 3vh;
+  }
+  .header{
+    padding: 0;
+  }
+  .header nav{
+    padding: 0;
+    padding-block-start: 7px;
+  }
+  .food-grid{
+    grid-template-columns: repeat(3, 2fr);
+    width: min(95%,100rem);
+  }
+  .foodImg{
+    height: 20rem;
+  }
+  .foodImg p{
+    margin-bottom: 15px;
+  }
+  .inner-dummy{
+    width: 20%;
+  }
+  
+  .inner-second{
+    width: 90%;
+    padding-inline-end: 41px;
+  }
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .welcomingPage{
+    margin-inline: 1rem 3rem;
+  }
+  
+}
+@media screen and (max-width: 600px){
+  .inner-second{
+    padding-inline-start: 14px;
+  }
+  .food-grid{
+    /* grid-template-columns: repeat(2, 4fr); */
+    /* justify-content:baseline; */
+    /* gap: 1.2rem; */
+  }
+
+  .foodImg{
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 375px){
+  html{
+    font-size: 6px;
+  }
+  .inner-second{
+    padding: 0;
+  }
+  #firstHeading {
+    font-size: 3rem;
+    padding-right: 20px;
+}
+  .food-grid{
+    grid-template-columns: repeat(2, 4fr);
+    justify-content:baseline;
+    gap: 1rem;
+  }
+}
