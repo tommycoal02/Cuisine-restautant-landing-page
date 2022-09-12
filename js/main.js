@@ -8,8 +8,8 @@ const firstMeal = document.querySelector('.displayPriceOnHover')
 // const eightMeal = document.querySelector('#eigthClick')
 
 
-document.querySelector('.foodImg').addEventListener('click', run)
+// document.querySelector('.foodImg').addEventListener('click', run)
 
-function run(){
-    firstMeal.classList.toggle('displayPriceOnHover')
-}
+// function run(){
+//     firstMeal.classList.toggle('displayPriceOnHover')
+// }

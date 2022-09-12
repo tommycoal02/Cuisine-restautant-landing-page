@@ -15,7 +15,7 @@
 /* LAYOUT
 /*******************************************/
 html{
-  font-size: 20px;
+  font-size: 15px;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -28,7 +28,8 @@ body {
   height: 100%;
 }
 .section{
-  padding-block: 3rem;
+  padding-block: 5rem;
+
 }
 .header{
   padding: 10px 70px;
@@ -58,6 +59,7 @@ h4{
 }
 .header a, .mealTime a{
   text-decoration: none;
+  color: black;
 }
 nav .menu a, i{
   text-decoration: none;
@@ -66,16 +68,8 @@ nav .menu a, i{
 }
 
 .welcomingPage{
-  /* padding-top: 100px 0; */
   margin-inline: 4rem 20rem;
-}
-
-.heading{
-  /* font-size: 3rem;
-  flex-wrap: wrap;
-  margin-bottom: 10px; */
-  /* font-size: 3rem; */
-  /* max-width: 40rem; */
+  padding-block: 3rem;
 }
 #firstHeading{
   font-size: 4rem;
@@ -83,23 +77,30 @@ nav .menu a, i{
 }
 
 .button{
-  margin-left: 3px;
   background-color: orange;
   text-decoration: none;
   border-radius: 4px;
   padding: 10px;
   padding-left: 20px;
   color: white;
-  
+}
+.button i{
+  background-color: red;
+}
+.input .button{
+  border-radius: 0 6px 6px 0px;
+  margin-left: -5px;
+  border: 1px solid orange;
 }
 
 .input input{
-  border-radius: 4px;
-  padding: 8px;
+  border-radius: 4px 0 0 4px;
+  padding: 9px;
   padding-left: 100px;
 }
 .social{
   display: flex;
+  margin-block-start: 20px;
 }
 
 
@@ -160,7 +161,83 @@ nav .menu a, i{
 
 .mealTime a:hover{color: orange}
 
-.food-grid img{
+
+
+
+
+.image{
+  position: relative;
+  width:14rem;
+}
+.image__img{
+  display: block;
+  width:100%;
+  height: 14rem;
+}
+.image__overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.image__overlay > *{
+  transform: translate(20px);
+  transition: transform 0.35s;
+}
+.image__overlay:hover{
+  opacity: 1;
+}
+.image__overlay:hover > *{
+  transform: translateY(0);
+}
+
+.image__title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.image__description{
+  font-size: 1.2rem;
+  margin-block-start: 0.25rem;
+}
+
+/* mine  */
+.food-grid{
+  justify-content: center;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-inline: 100px;
+}
+
+/* .foodImg{
+  position: relative;
+  width:14rem;
+}
+.image__img{
+  display: block;
+  width: 100%;
+}
+.displayPriceOnHover{
+  position: relative;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
+
+
+/*  */
+/* .food-grid img{
   width: 14rem;
 }
 
@@ -169,26 +246,26 @@ nav .menu a, i{
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
-  /* width: 50rem; */
-  margin-inline: 30px;
+  margin-inline: 100px;
 }
 .foodImg{
   background-color: white;
   background-size:cover;
   background-repeat: no-repeat;
   padding-top: 50px;
-  height: 13rem;
+  height: 16rem;
+  transition: font-size .3s linear, height .5s ease-in;
 }
-/* .foodImg:hover{
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(10px);
+
+.displayPriceOnHover:hover{
+  font-weight: bold;
+  color: red;
+}
+.foodImg p{
+  margin-bottom: 30px;
 } */
-.foodImg p{
-  margin-bottom: 30px;
-}
-.foodImg p{
-  margin-bottom: 30px;
-}
+
+/* }
 .foodImg.one{
   background-image: url(../img/selected\ 1.jpg);
 
@@ -203,22 +280,29 @@ nav .menu a, i{
 .foodImg.four{
   background-image: url(../img/bread\ and\ steak.jpg);
 }
-.displayPriceOnHover{
-  display: none;
+.foodImg.five{
+  background-image: url(../img/bread\ and\ steak.jpg);
 }
-
-
-
+.foodImg.six{
+  background-image: url(../img/bread\ and\ steak.jpg);
+}
+.foodImg.seven{
+  background-image: url(../img/bread\ and\ steak.jpg);
+}
+.foodImg.eight{
+  background-image: url(../img/bread\ and\ steak.jpg);
+} */
 
 .fourthPage{
-  background-image: url(../img/istockphoto-680917848-612x612.jpg);
+  background-image: url(../img/FLSIX0qXsAAGzyq.jpg);
   background-position-y: 1000px;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-position-y: 10px;
   padding-top: 60px;
   text-align: center;
-  padding-bottom: 200px;
+  padding-block: 60px;
+  padding-bottom: 50px;
 }
 .openingHours{
   display: flex;
@@ -234,8 +318,9 @@ nav .menu a, i{
   background-color: rgba(255, 255, 255, 0.459);
 }
 .fifthPage img{
-  width: 9%;
-  border-radius: 70px 70px
+  width: 10%;
+  /* border-radius: 70px 70px */
+  border-radius: 50%;
 }
 
 #footer{
@@ -259,7 +344,7 @@ nav .menu a, i{
 #footer h3{
   margin-bottom: 30px;
 }
-.footerInner h3, h6,section{
+.footerInner h3, h6{
   margin-bottom: 10px;
 }
 .footerInner-4 i{
@@ -290,19 +375,25 @@ nav .menu a, i{
   .header nav{
     padding: 0;
     padding-block-start: 7px;
+    margin-inline-start: 1rem
+  }
+  .input .button{
+    border-radius: 0 4px 4px 0px;
+    margin-left: -2px;
   }
   .food-grid{
     grid-template-columns: repeat(3, 2fr);
     width: min(95%,100rem);
+    margin-inline: 20px;
   }
   .foodImg{
-    height: 20rem;
+    height: 18rem;
   }
   .foodImg p{
     margin-bottom: 15px;
   }
   .inner-dummy{
-    width: 20%;
+    width: 15%;
   }
   
   .inner-second{
@@ -322,15 +413,18 @@ nav .menu a, i{
 @media screen and (max-width: 600px){
   .inner-second{
     padding-inline-start: 14px;
+    margin-inline-end: 20px;
   }
   .food-grid{
-    /* grid-template-columns: repeat(2, 4fr); */
-    /* justify-content:baseline; */
-    /* gap: 1.2rem; */
+    margin-inline: 10px;
+  }
+  .input input {
+
+    padding-left: 84px;
   }
 
   .foodImg{
-    height: 20rem;
+    height: 18rem;
   }
 }
 
@@ -343,11 +437,18 @@ nav .menu a, i{
   }
   #firstHeading {
     font-size: 3rem;
-    padding-right: 20px;
+    padding-right: 76px;
 }
   .food-grid{
     grid-template-columns: repeat(2, 4fr);
     justify-content:baseline;
+    width: min(95%,100rem);
     gap: 1rem;
+  }
+  .image{
+    width:80%;
+    margin-inline: 0;
+    justify-content: center;
+    margin-inline-start: 20px;
   }
 }
