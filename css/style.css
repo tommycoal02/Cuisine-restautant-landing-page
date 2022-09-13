@@ -60,6 +60,11 @@ h4{
 .header a, .mealTime a{
   text-decoration: none;
   color: black;
+  font-weight: bold;
+  transition: 1s color;
+}
+nav a:hover{
+  color: orange;
 }
 nav .menu a, i{
   text-decoration: none;
@@ -85,12 +90,14 @@ nav .menu a, i{
   color: white;
 }
 .button i{
-  background-color: red;
+  color: #eef0f5;
 }
 .input .button{
   border-radius: 0 6px 6px 0px;
   margin-left: -5px;
   border: 1px solid orange;
+  color: white;
+  font-weight: bold;
 }
 
 .input input{
@@ -101,6 +108,15 @@ nav .menu a, i{
 .social{
   display: flex;
   margin-block-start: 20px;
+}
+.social i{
+  color: orange;
+  font-weight: bold;
+  /* padding-inline: -10px; */
+}
+.social a{
+  margin-inline: 19px;
+  font-weight: bold;
 }
 
 
@@ -117,7 +133,6 @@ nav .menu a, i{
 
 .inner-second{
   width: 90%;
-  /* flex-wrap: wrap; */
   padding:50px 150px;
 }
 
@@ -158,12 +173,7 @@ nav .menu a, i{
 .mealTime a{
   color: black;
 }
-
 .mealTime a:hover{color: orange}
-
-
-
-
 
 .image{
   position: relative;
@@ -212,6 +222,7 @@ nav .menu a, i{
 /* mine  */
 .food-grid{
   justify-content: center;
+  /* text-align: center; */
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
@@ -386,6 +397,11 @@ nav .menu a, i{
     width: min(95%,100rem);
     margin-inline: 20px;
   }
+  .image{
+    width:80%;
+    margin-inline: 10px;
+    margin-inline-start: 20px;
+  }
   .foodImg{
     height: 18rem;
   }
@@ -411,12 +427,19 @@ nav .menu a, i{
   
 }
 @media screen and (max-width: 600px){
+  .header li {
+    margin-left: 13px;
+  }
   .inner-second{
     padding-inline-start: 14px;
     margin-inline-end: 20px;
   }
   .food-grid{
     margin-inline: 10px;
+  }
+  .image {
+    width:100%;
+    margin-inline-start: 0;
   }
   .input input {
 
@@ -426,11 +449,19 @@ nav .menu a, i{
   .foodImg{
     height: 18rem;
   }
+
+  .social a{
+    margin-inline: 8px;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: 375px){
   html{
-    font-size: 6px;
+    font-size: 8px;
+  }
+  .header li {
+    margin-left: 13px;
   }
   .inner-second{
     padding: 0;
